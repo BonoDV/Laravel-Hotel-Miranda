@@ -1,0 +1,112 @@
+.offer-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  max-width: 340px;
+  margin: 2rem auto;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+
+  &__top {
+    background: #f7f7f7;
+    padding: 1.25rem 1.5rem 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+  }
+
+  &__old-price {
+    color: #b7a98e;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: line-through;
+    letter-spacing: 0.5px;
+    .offer-card__night {
+      font-size: 0.8rem;
+      font-weight: 400;
+      margin-left: 2px;
+    }
+  }
+
+  &__new-price {
+    color: #d23166;
+    font-size: 1.5rem;
+    font-weight: 700;
+    .offer-card__night {
+      color: #b7a98e;
+      font-size: 0.8rem;
+      font-weight: 400;
+      margin-left: 2px;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem;
+  }
+
+  &__bed-type {
+    color: #b7a98e;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+
+  &__desc {
+    color: #777;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  &__amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__amenity {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #b7a98e;
+    min-width: 130px;
+    img {
+      width: 1.1rem;
+      height: 1.1rem;
+      margin-right: 0.4rem;
+      opacity: 0.7;
+    }
+    &:nth-child(even) {
+      color: #888;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    background: #b7a98e;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 2px;
+    padding: 0.9rem 0;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+    &:hover {
+      background: #a08c6b;
+    }
+  }
+}

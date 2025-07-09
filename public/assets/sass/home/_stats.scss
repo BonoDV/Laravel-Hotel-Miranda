@@ -1,0 +1,48 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+
+.stats {
+    width: 100%;
+    height: 110vh;
+    background-color: $black-22;
+    margin-bottom: 3.75rem;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+
+    &__container--projects,
+    &__container--backers,
+    &__container--categories,
+    &__container--raised {
+        display: contents;
+        margin-bottom: 2rem
+    }
+
+    &__container--projects-number {
+        @include typography($robotoFont, 700, $white,
+            60px, 136%, 0px);
+
+        span {
+            @include typography($robotoFont, 700, $white,
+                16px, 136%, 0px);
+        }
+    }
+
+    &__container--projects-title {
+        @include typography($robotoFont, 700, $black-99,
+            16px, 136%, 0px);
+    }
+
+
+}

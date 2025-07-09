@@ -1,0 +1,22 @@
+@use './../common/header';
+@use "_home";
+@use "_availability";
+@use "_about-us";
+@use "_rooms";
+@use "_video";
+@use "_features";
+@use "_menu";
+@use "_photos";
+@use "_stats";
+@use './../common/footer';
+
+html,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    min-width: 320px
+}

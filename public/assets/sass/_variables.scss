@@ -1,0 +1,21 @@
+$white: #ffffff;
+$white-f9: #f9f9f9;
+$black-33: #333333;
+$black-11: #111111;
+$black-22: #222222;
+$black-77: #777777;
+$black-88: #888888;
+$black-99: #999999;
+$grey-c2: #c2c2c2;
+$grey-f2: #f2f2f2;
+$brown-cafe: #bead8e;
+$brown-cafe-2: #bdac8d;
+$brown-cafe-3: #bfa980;
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+$archivoFont: "Archivo", sans-serif;
+$oldStandardTTFont: "Old Standard TT", serif;
+$robotoFont: "Roboto", sans-serif;

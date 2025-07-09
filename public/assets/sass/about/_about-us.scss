@@ -1,0 +1,111 @@
+@use "./../mixins" as *;
+@use "./../variables" as *;
+
+.about-us {
+  &__container {
+    height: 50vh;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    h2 {
+      @include typography(
+        $oldStandardTTFont,
+        400,
+        $black-22,
+        35px,
+        100%,
+        -1.16px
+      );
+      margin-bottom: 20px;
+      width: 80%;
+    }
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Espacio entre íconos */
+  }
+
+  &__icon {
+    width: 10rem; /* Ajusta el tamaño si lo necesitas */
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__icon--filled {
+    width: 10rem;
+    height: 10rem;
+    background-color: $brown-cafe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__restaurant-card {
+    max-width: 340px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &-image {
+      width: 100%;
+      height: 140px;
+      background: #e5e5e5;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+
+    &-subtitle {
+      color: #888;
+      font-size: 14px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      font-size: 2rem;
+      font-family: "Georgia", serif;
+      margin: 0 0 16px 0;
+      line-height: 1.1;
+    }
+
+    &-desc {
+      color: #888;
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    &-button {
+      background: #c7b299;
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      padding: 14px 0;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &:hover {
+        background: #b89d7b;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+
+.photos {
+    margin-bottom: 3.75rem;
+}
+
+.photos-swiper {
+    height: 25rem;
+
+    &__slide.swiper-slide {
+        // Estilos para cada slide
+
+        .photos-swiper__image {
+            &--transparent {
+                width: 20.9375rem;
+                height: 20.9375rem;
+                object-fit: cover;
+                margin-left: 3rem;
+            }
+        }
+    }
+
+    &__pagination.swiper-pagination {
+        .swiper-pagination-bullet-active {
+            background-color: rgb(189, 172, 141) !important;
+        }
+    }
+}

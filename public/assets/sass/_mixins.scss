@@ -1,0 +1,93 @@
+@use 'variables' as *;
+
+@mixin typography($font-family, $font-weight, $color, $font-size, $line-height, $letter-spacing) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: $color;
+    font-size: $font-size;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin button($bg-color, $width, $height) {
+    background-color: $bg-color;
+    width: $width;
+    height: $height;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin input($bg-color) {
+    background-color: $bg-color;
+    border: none;
+    border-bottom: 2px solid $brown-cafe;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+
+    &::-webkit-calendar-picker-indicator {
+        display: none;
+    }
+}
+
+@mixin card($width, $height, $bg-color: null) {
+    width: $width;
+    height: $height;
+
+    @if $bg-color {
+        background-color: $bg-color;
+    }
+
+    object-fit: cover;
+}
+
+@mixin center($direction: column) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin spacing($margin-top: null, $margin-left: null,
+    $margin-botton: null, $margin-right: null,
+    $padding-top: null, $padding-left: null,
+    $padding-bottom: null, $padding-right: null) {
+    @if $margin-top {
+        margin-top: $margin-top;
+    }
+
+    @if $margin-left {
+        margin-left: $margin-left;
+    }
+
+    @if $margin-botton {
+        margin-bottom: $margin-botton;
+    }
+
+    @if $margin-right {
+        margin-right: $margin-right;
+    }
+
+    @if $padding-top {
+        padding-top: $padding-top;
+    }
+
+    @if $padding-left {
+        padding-left: $padding-left;
+    }
+
+    @if $padding-bottom {
+        padding-bottom: $padding-bottom;
+    }
+
+    @if $padding-right {
+        padding-right: $padding-right;
+    }
+
+}
+
+@mixin swiper($width, $height) {
+    width: $width;
+    height: $height;
+}

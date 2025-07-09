@@ -1,0 +1,130 @@
+@use "./../mixins" as *;
+@use "./../variables" as *;
+
+.rooms-details-related-rooms {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid $grey-f2;
+  min-height: 30vh;
+
+  &__title {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    color: $black-22;
+    margin-bottom: 1.5rem;
+  }
+
+  &__slider {
+    width: 100%;
+    background: $grey-f2;
+    border-radius: 0.25rem;
+    min-height: 160px;
+    margin-bottom: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #fff;
+    border: none;
+    border-radius: 0.15rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    &--left {
+      left: 0.75rem;
+    }
+    &--right {
+      right: 0.75rem;
+      background: $brown-cafe-3;
+      color: #fff;
+    }
+  }
+
+  &__slider-img {
+    width: 100%;
+    height: 160px;
+    background: #d6d6d6;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__slider-amenities {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 0.75rem 1.5rem;
+    margin: -2.5rem auto 1.5rem auto;
+    max-width: 320px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__slider-amenity {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    color: $black-77;
+    img {
+      width: 1.25rem;
+      height: 1.25rem;
+      object-fit: contain;
+      opacity: 0.7;
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__room-name {
+    font-family: "Playfair Display", serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $black-22;
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+  }
+
+  &__room-desc {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 1rem;
+    color: $black-77;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+
+  &__room-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__room-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $brown-cafe-3;
+  }
+
+  &__room-booking {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $black-77;
+    opacity: 0.7;
+  }
+}

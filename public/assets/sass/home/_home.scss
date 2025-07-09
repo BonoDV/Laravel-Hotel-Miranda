@@ -1,0 +1,49 @@
+@use './../_variables' as *;
+@use './../_mixins' as *;
+.home {
+    height: 50vh;
+    background-color: $black-33;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__container {
+        max-width: 1200px;
+    }
+
+    &__header {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        @include typography($archivoFont, 700, $white,
+            13px, 1.75rem, 2.8px);
+        margin-bottom: 20px;
+        width: 80%;
+    }
+
+    &__title {
+        @include typography($oldStandardTTFont, 400,
+            $white, 56px, 60px, -1.2px);
+        width: 19.625rem;
+    }
+
+    &__actions {
+        gap: 20px;
+        width: 220px;
+    }
+
+    &__action {
+        @include button($brown-cafe, 100%, 60px);
+        @include typography($archivoFont, 700, $white,
+            14px, 100%, 2.8px);
+
+        &--secondary {
+            margin-top: 25px;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.33);
+        }
+    }
+}

@@ -1,0 +1,147 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.footer {
+    height: 160vh;
+    background-image: url("../../img/footer-design.png");
+
+    &__social--text {
+        @include typography($archivoFont, 400, $black-77, 16px, 26px, 0px);
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__social-icons {
+        display: flex;
+        height: 3.125rem;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__social-icons--container {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        background-color: transparent;
+    }
+
+    &__social-icons--container:hover {
+        background-color: $brown-cafe; // Fondo blanco al hover
+    }
+
+    &__social-icon {
+        display: block;
+        filter: invert(
+            1
+        ); // Invierte los colores (icono blanco sobre fondo negro)
+    }
+
+    &__social-icons--container:hover &__social-icon {
+        filter: invert(
+            0
+        ); // Vuelve a los colores originales (icono negro sobre fondo blanco)
+    }
+
+    &__services {
+        margin-top: 2rem;
+        margin-left: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    &__services--text {
+        @include typography(
+            $oldStandardTTFont,
+            400,
+            $black-22,
+            24px,
+            24px,
+            0px
+        );
+    }
+
+    &__services--container {
+        display: flex;
+        gap: 1rem;
+    }
+
+    &__services--container--list {
+        width: 40%;
+    }
+
+    &__services--list {
+        list-style-type: none; // Elimina bullets por defecto
+
+        li:before {
+            content: "+"; // Código Unicode para +
+            margin-right: 0.5rem;
+        }
+    }
+
+    &__services--item {
+        @include typography($robotoFont, 400, $black-77, 16px, 48px, 0px);
+    }
+
+    &__contact--text {
+        @include typography(
+            $oldStandardTTFont,
+            400,
+            $black-22,
+            24px,
+            24px,
+            0px
+        );
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+
+    &__contact--data--container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+        margin-left: 1rem;
+
+        img {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__contact--data--first {
+        @include typography(
+            $oldStandardTTFont,
+            400,
+            $black-22,
+            20px,
+            24px,
+            0px
+        );
+    }
+
+    &__contact--data--second {
+        @include typography($robotoFont, 400, $black-77, 14px, 100%, 0px);
+    }
+
+    &__copyright {
+        margin-left: 1rem;
+    }
+
+    &__copyright--text,
+    &__copyright--final {
+        @include typography($robotoFont, 700, $black-22, 16px, 100%, -0.48px);
+    }
+
+    &__copyright--text {
+        margin-bottom: 2rem;
+    }
+}

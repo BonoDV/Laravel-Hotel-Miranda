@@ -1,0 +1,54 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+
+.availability {
+    height: 50vh;
+    background-color: $black-22;
+    margin-bottom: 80px;
+
+    &__dates {
+        padding-top: 36px;
+        margin-left: 20px;
+    }
+
+    &__dates label {
+        @include typography($archivoFont, 700, $white,
+            16px, 100%, 0px);
+        display: block;
+        width: 100%;
+    }
+
+    &__dates input {
+        @include typography($archivoFont, 700,
+            $black-33, 14px, 100%, 0px);
+        @include input(transparent);
+        width: 90%;
+        height: 60px;
+        padding-left: 50px;
+    }
+
+    // Icons
+    &__dates--departure,
+    &__dates--arrival {
+        background-image: url('../svg/CalendarIcon.svg');
+    }
+
+    &__dates--arrival {
+        margin-bottom: 30px;
+    }
+
+    &__check {
+        display: flex;
+        gap: 20px;
+        width: 250px;
+        margin-top: 42px;
+        margin-left: 20px;
+    }
+
+    &__check--button {
+        @include button($brown-cafe, 100%, 3.75rem);
+        @include typography($archivoFont, 700, $white,
+            14px, 100%, 2.8px);
+        flex: 1;
+    }
+}

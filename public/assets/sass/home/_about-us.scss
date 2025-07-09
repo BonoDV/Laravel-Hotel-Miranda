@@ -1,0 +1,147 @@
+@use './../variables' as *;
+@use './../mixins' as *;
+
+.about-us {
+    height: 200vh;
+
+    &__container {
+        height: 65vh;
+        background-color: $white-f9;
+    }
+
+    &__subtitle {
+        @include typography($archivoFont, 700,
+            $black-77, 13px, 18px, 2.8px);
+        margin-left: 1.25rem;
+        margin-bottom: 2.375rem;
+        padding-top: 2.375rem;
+        width: 8.125rem;
+        height: 1.1rem;
+    }
+
+    &__title {
+        @include typography($oldStandardTTFont, 400,
+            $black-11, 3.5rem, 3.75rem, -1.2px);
+        margin-top: 3rem;
+        margin-left: 1.25rem;
+        width: 20.625rem;
+        height: 7.5rem;
+        text-align: center;
+    }
+
+    &__description {
+        @include typography($archivoFont, 400,
+            $black-77, .87rem, 1.5rem, 0px);
+        margin-top: 1.5rem;
+        margin-left: 1.25rem;
+        width: 20.625rem;
+        height: 7.5rem;
+        text-align: left;
+    }
+
+    &__actions button {
+        @include typography($archivoFont, 700,
+            $white, .875rem, 100%, 2.8px);
+        @include button($brown-cafe, 13.5rem,
+            60px);
+        margin-top: 1.5rem;
+        margin-left: 1.25rem;
+        flex: 1;
+    }
+
+    &__cards-team,
+    &__cards-luxury {
+        margin-top: -25%;
+
+        // Estilo solo para la imagen principal del equipo
+        &>img {
+            width: 16.875rem;
+            height: 18.75rem;
+            margin-left: 20%;
+            object-fit: cover;
+        }
+    }
+
+    &__cards-room {
+        margin-top: 10%;
+    }
+
+
+    &__cards-team-icons,
+    &__cards-luxury-icons {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40%;
+    }
+
+    &__cards-luxury-icons {
+        background-color: $black-22;
+        width: 16.875rem;
+        height: 18.75rem;
+        margin-left: 20%;
+        margin-top: -1%;
+    }
+
+    &__cards-luxury-icons img {
+        width: 3.5625rem;
+        height: 3.125rem;
+    }
+
+    &__cards-team-title {
+        @include typography($oldStandardTTFont, 400,
+            $white, 1.875rem, 1.875rem, -0.0563rem);
+        margin-top: 1.875rem;
+        width: 10.6875rem;
+        height: 1.875rem;
+        text-align: center;
+    }
+
+    &__cards-team-description {
+        @include typography($robotoFont, 400,
+            $white, .875rem, 1.375rem, 0px);
+        margin-top: 1.3125rem;
+        width: 12.5rem;
+        height: 4.875rem;
+        text-align: center;
+    }
+
+    &__cards-team-icons--small {
+        width: 4.25rem;
+        height: 3.125rem;
+        margin-left: 0%;
+        margin-top: 10%;
+    }
+
+    &__cards-team-icons--transparent {
+        position: absolute;
+        left: 47%;
+        width: 9rem;
+        height: 6.625rem;
+        z-index: -3;
+        margin-left: 0%;
+        margin-top: 0%;
+        opacity: 0.05;
+    }
+
+    &__cards-team-icons h2 {
+        @include typography($oldStandardTTFont, 400,
+            $black-11, 1.875rem, 1.875rem, -0.0563rem);
+        margin-left: 1.25rem;
+        margin-top: 5%;
+        width: 12.5rem;
+        height: 1.875rem;
+
+    }
+
+    &__cards-team-icons p {
+        @include typography($robotoFont, 400,
+            $black-11, .875rem, 1.375rem, 0px);
+        margin-left: 1.25rem;
+        width: 12.5rem;
+        height: 4.8125rem;
+        margin-top: 5%;
+    }
+
+}

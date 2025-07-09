@@ -1,0 +1,63 @@
+// Contact Form Section
+.contact-form {
+  width: 100%;
+  max-width: 370px;
+  margin: 2.5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  min-height: 60vh;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 2px;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    margin: 0;
+    min-height: 56px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    opacity: 0.7;
+  }
+
+  &__input,
+  &__textarea {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: #888;
+    width: 100%;
+    resize: none;
+    font-family: inherit;
+  }
+
+  &__textarea {
+    min-height: 80px;
+    padding-top: 0.5rem;
+  }
+
+  &__button {
+    width: 100%;
+    background: #c7b299;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    border: none;
+    border-radius: 2px;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  &__button:hover {
+    background: #b39a7c;
+  }
+}
