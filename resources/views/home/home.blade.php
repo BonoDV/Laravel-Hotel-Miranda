@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@vite(['public/assets/sass/home/styles.scss', 'resources/js/app.js'])
+@vite(['public/assets/sass/home/styles.scss'])
 @section('content')
 <!DOCTYPE html>
 <html>

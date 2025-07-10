@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 @extends('layouts.app')
-@vite(['public/assets/sass/offers/offers_styles.scss', 'resources/js/app.js'])
+@vite(['public/assets/sass/offers/offers_styles.scss'])
 @section('content')
 
 <head>

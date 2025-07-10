@@ -7,7 +7,7 @@
     <title>Rooms | Hotel Miranda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-@vite(['public/assets/sass/rooms/rooms_styles.scss', 'resources/js/app.js'])
+@vite(['public/assets/sass/rooms/rooms_styles.scss'])
 @section('content')
 
 <body>
