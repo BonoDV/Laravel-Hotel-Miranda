@@ -14,7 +14,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            cd /var/www/miranda
+            cd /var/www/Laravel-Hotel-Miranda
             git pull origin main
             sudo composer install
             sudo php artisan migrate
