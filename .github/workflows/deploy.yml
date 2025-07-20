@@ -1,16 +1,8 @@
-name: Remote SSH Command
-on: [push]
-jobs:
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    environment: DEPLOY
-    steps:
-      - name: Execute remote SSH commands using password
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: whoami | ls -al
+- name: Execute remote SSH commands using SSH key
+  uses: appleboy/ssh-action@v1
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    key: ${{ secrets.KEY }}
+    port: ${{ secrets.PORT }}
+    script: whoami
