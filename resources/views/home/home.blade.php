@@ -38,7 +38,7 @@
     <section class="home">
         <div class="home__container">
             <div class="home__header">
-                <p class="home__subtitle">THE ULTIMATE LUXURY EXPERIENCE</p>
+                <p class="home__subtitle">THE ULTIMATE LUXURY EXPERIENCE :)</p>
                 <h1 class="home__title">The Perfect Base For You</h1>
             </div>
             <div class="home__actions">
