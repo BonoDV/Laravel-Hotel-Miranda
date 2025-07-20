@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEPLOY
     steps:
-      - name: Execute remote SSH commands using key
+      - name: Execute deployment commands via SSH
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
@@ -14,9 +14,9 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            echo "===== WHOAMI OUTPUT ====="
-            whoami
-            echo "=========================="
-            echo "===== LS OUTPUT ====="
-            ls -al
-            echo "======================"
+            cd /var/www/miranda
+            git pull origin main
+            sudo composer install
+            sudo php artisan migrate
+            sudo npm install
+            sudo service apache2 restart
